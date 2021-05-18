@@ -1,0 +1,6 @@
+#!/bin/sh
+CC="gcc"
+CFLAGS="-Wall -g"
+
+$CC -c exc_req.c $CFLAGS
+$CC -c libshell.c $CFLAGS
