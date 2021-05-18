@@ -4,3 +4,10 @@ CFLAGS="-Wall -g"
 
 $CC -c exc_req.c $CFLAGS
 $CC -c libshell.c $CFLAGS
+if [ $# -gt 0 ] 
+then
+if [ $1 = "clean" ] 
+then
+rm ./*.o
+fi
+fi
