@@ -27,13 +27,10 @@ char* get_line(FILE* stream){
     return buf;
 }
 
-
 unsigned char starts_with(char* _in, char* startsw){
-  for(unsigned int i=0;;i++){
-    if(_in[i]==0x0||startsw[i]==0x0) break;
+  for(unsigned int i=0;_in[i]&&startsw[i];i++){
     if(_in[i]!=startsw[i]) return 1;
   }
 
   return 0;
-
 }

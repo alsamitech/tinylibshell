@@ -6,7 +6,8 @@
 #include "exc_req.h"
 
 // the void is the shell instance
-typedef uint8_t (*shell_callback) (void*, char*);
+struct _shell_inst;
+typedef uint8_t (*shell_callback) (struct _shell_inst*, char*);
 
 enum {
   SHELL_CONTINUE,

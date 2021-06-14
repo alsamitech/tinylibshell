@@ -6,7 +6,7 @@ void shell_run_default(shell_callback callback){
   shell_run(&conf);
 }
 
-extern void shell_run(shell_config_t* config){
+void shell_run(shell_config_t* config){
   shell_inst_t inst={*config, {1}};
   for(;;inst.stats.commands_processed++){
     fputs(inst.config.pkey, inst.config.stream_out);
