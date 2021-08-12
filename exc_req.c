@@ -3,7 +3,7 @@
 char* get_line(FILE* stream){
     size_t bytes=0;
     unsigned int capacity=64;
-    char* buf=malloc(capacity);
+    char* buf=(char*)malloc(capacity);
     if(!buf)return 0x0;
     char c;
 #ifdef __unix__
@@ -21,7 +21,6 @@ char* get_line(FILE* stream){
             }
         }
         buf[bytes-1]=c;
-        
     }
     
     return buf;
